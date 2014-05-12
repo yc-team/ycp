@@ -1,30 +1,30 @@
 {
-  "name": "yc",
+  "name": "ycp",
   "version": "0.0.2",
-  "description": "yc is yc",
+  "description": "ycp is ycp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "yc": "./bin/yc"
+    "yc": "./bin/ycp",
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/yc-team/yc.git"
+    "url": "git://github.com/yc-team/ycp.git"
   },
   "dependencies": {
     "yc-cmd" : "0.0.1",
     "yc-core": "0.0.1"
   },
   "keywords": [
-    "yc",
+    "ycp",
     "cmd",
     "tool"
   ],
   "author": "zhangyaochun",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/yc-team/yc/issues"
+    "url": "https://github.com/yc-team/ycp/issues"
   }
 }

@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "yc-cmd" : "0.0.1",
-    "yc-core": "0.0.1"
+    "yc-core": "0.0.2"
   },
   "keywords": [
     "ycp",

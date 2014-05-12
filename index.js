@@ -26,7 +26,7 @@ yc.cli.version = function(){
     var result = [
         '',
         '  v :',
-        ''
+        '',
         ' ' 
     ];
 

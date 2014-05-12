@@ -1,10 +1,13 @@
 {
   "name": "yc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "yc is yc",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "yc": "./bin/yc"
   },
   "repository": {
     "type": "git",
@@ -16,7 +19,6 @@
   },
   "keywords": [
     "yc",
-    "yc-team",
     "cmd",
     "tool"
   ],

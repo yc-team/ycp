@@ -1,7 +1,7 @@
 'use strict';
 
 //yc-core
-var yc = require('yc-core');
+var yc = module.exports = require('yc-core');
 
 yc.require = function(){
     var name = 'yc-' + Array.prototype.slice.call(arguments, 0).join('-');

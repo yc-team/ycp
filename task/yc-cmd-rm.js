@@ -1,4 +1,4 @@
-exports.name = 'rm';
+exports.name = 'rm <dest>';
 exports.usage = '<dest>';
 exports.desc = 'Remove files from dest';
 

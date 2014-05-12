@@ -1,6 +1,6 @@
 {
   "name": "ycp",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ycp is ycp",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "url": "git://github.com/yc-team/ycp.git"
   },
   "dependencies": {
-    "yc-cmd" : "0.0.1",
-    "yc-core": "0.0.2",
+    "yc-cmd" : "latest",
+    "yc-core": "latest",
     "colors": "0.6.0"
   },
   "keywords": [

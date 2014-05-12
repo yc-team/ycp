@@ -1,0 +1,24 @@
+{
+  "name": "yc",
+  "version": "0.0.1",
+  "description": "yc is yc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yc-team/yc.git"
+  },
+  "keywords": [
+    "yc",
+    "yc-team",
+    "cmd",
+    "tool"
+  ],
+  "author": "zhangyaochun",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/yc-team/yc/issues"
+  }
+}

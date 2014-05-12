@@ -8,6 +8,7 @@
   },
   "bin": {
     "yc": "./bin/ycp",
+    "ycp": "./bin/ycp"
   },
   "repository": {
     "type": "git",

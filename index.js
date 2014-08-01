@@ -52,19 +52,30 @@ yc.cli.version = function(){
 //yc-cmd
 var commander = yc.cli.commander = require('yc-cmd');
 
-//run
 yc.cli.run = function(arg){
 
-        if (arg.length < 3 || (arg.length == 3 && arg[2] === '-h') || (arg.length == 3 && arg[2] === '--help')) {
-            //help
-            yc.cli.help();
-            return false;
+
+        /*console.log(cmd);
+
+        var name = 'rm <dest>';
+        var usage = '<dest>';
+        var desc = 'Remove files from dest';
+
+        commander
+                .command(name, desc)
+                .usage(cmd.usage)
+                .action(function(param){
+                    console.log(param);
+                })
+
+        console.log(arg);*/
+
+
+        if (arg.length < 3 || arg[2] === '-h' || arg[2] === '--help') {
 
         } else if (arg[2] === '-v' || arg[2] === '--version') {
-            //version
             yc.cli.version();
             return false;
-
         } else {
 
             var cmd = yc.require('cmd', arg[2]);
@@ -78,5 +89,6 @@ yc.cli.run = function(arg){
             commander.parse(arg);
 
         }
+
 
 };

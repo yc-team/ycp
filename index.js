@@ -3,6 +3,10 @@
 //yc-core
 var yc = module.exports = require('yc-core');
 
+
+var fs = require('fs');
+var path = require('path');
+
 yc.require = function(){
     var name = 'yc-' + Array.prototype.slice.call(arguments, 0).join('-');
 
@@ -24,8 +28,55 @@ yc.cli.colors = require('colors');
 yc.cli.info = yc.file.readJSON(__dirname + '/package.json');
 
 
+yc.cli.helpInfo = function() {
+
+    var content = [];
+
+    var taskPath = __dirname + '/task';
+    fs.readdirSync(taskPath).forEach(function(filename){
+        var filepath = path.join(taskPath, filename);
+
+        var cmdInfo = require(filepath);
+
+        if (cmdInfo && cmdInfo.name) {
+        
+            var name = require(filepath).name;
+            name = yc.util.pad(name, 22);
+
+            var desc = require(filepath).desc;
+
+            content.push('    ' + name.green + '    ' + (desc || ''));
+            content.push('');
+        }
+
+
+    });
+
+    return content.join('\n');
+}
+
+
 yc.cli.help = function(){
 
+    var helpInfo = yc.cli.helpInfo();
+
+    var content = [
+        '',
+        '  Usage: ' + yc.cli.name + ' <command>'.green,
+        '',
+        '',
+        '  Commands:',
+        '',
+        '',
+        '' + helpInfo,
+        '  Options:',
+        '',
+        '    -h, --help     output usage information',
+        '    -v, --version  output the version number',
+        ''
+    ];
+
+    console.log(content.join('\n'));
 };
 
 yc.cli.version = function(){
@@ -72,7 +123,7 @@ yc.cli.run = function(arg){
 
 
         if (arg.length < 3 || arg[2] === '-h' || arg[2] === '--help') {
-
+            yc.cli.help();
         } else if (arg[2] === '-v' || arg[2] === '--version') {
             yc.cli.version();
             return false;

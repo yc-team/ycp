@@ -67,7 +67,6 @@ yc.cli.help = function(){
         '',
         '  Commands:',
         '',
-        '',
         '' + helpInfo,
         '  Options:',
         '',

@@ -62,7 +62,7 @@ yc.cli.help = function(){
 
     var content = [
         '',
-        '  Usage: ' + yc.cli.name + ' <command>'.green,
+        '  Usage: ' + yc.cli.name.cyan + ' <command>'.green,
         '',
         '',
         '  Commands:',

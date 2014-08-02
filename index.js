@@ -41,11 +41,11 @@ yc.cli.helpInfo = function() {
         if (cmdInfo && cmdInfo.name) {
         
             var name = require(filepath).name;
-            name = yc.util.pad(name, 22);
+            name = yc.util.pad(name, 16);
 
             var desc = require(filepath).desc;
 
-            content.push('    ' + name.green + '    ' + (desc || ''));
+            content.push('    ' + name.green + '    ' + (desc || '').grey);
             content.push('');
         }
 
@@ -70,8 +70,9 @@ yc.cli.help = function(){
         '' + helpInfo,
         '  Options:',
         '',
-        '    -h, --help     output usage information',
-        '    -v, --version  output the version number',
+        '    -h, --help          output usage information'.grey,
+        '',
+        '    -v, --version       output the version number'.grey,
         ''
     ];
 
@@ -103,23 +104,6 @@ yc.cli.version = function(){
 var commander = yc.cli.commander = require('yc-cmd');
 
 yc.cli.run = function(arg){
-
-
-        /*console.log(cmd);
-
-        var name = 'rm <dest>';
-        var usage = '<dest>';
-        var desc = 'Remove files from dest';
-
-        commander
-                .command(name, desc)
-                .usage(cmd.usage)
-                .action(function(param){
-                    console.log(param);
-                })
-
-        console.log(arg);*/
-
 
         if (arg.length < 3 || arg[2] === '-h' || arg[2] === '--help') {
             yc.cli.help();
